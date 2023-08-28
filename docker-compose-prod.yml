@@ -34,16 +34,17 @@ services:
       - akaunting-app
 
   database:
-    image: postgres:alpine
-    container_name: ${APP_NAME}_database
+    image: mysql
+    container_name: ${APP_NAME}_database_dev
     ports:
-      - ${DB_PORT:-5432}:5432
+      - ${DB_PORT:-3306}:3306
     volumes:
-      - akaunting-db:/var/lib/postgresql/data
+      - akaunting-db:/var/lib/mysql
     environment:
-      POSTGRES_DB: $DB_DATABASE
-      POSTGRES_USER: $DB_USERNAME
-      POSTGRES_PASSWORD: $DB_PASSWORD
+      MYSQL_USER: $DB_USERNAME
+      MYSQL_PASSWORD: $DB_PASSWORD
+      MYSQL_DATABASE: $DB_DATABASE
+      MYSQL_ROOT_PASSWORD: $DB_PASSWORD
     networks:
       - akaunting-app
 

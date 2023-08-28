@@ -22,6 +22,7 @@ COPY . .
 # install composer deps
 RUN COMPOSER_ALLOW_SUPERUSER=1 && composer prod
 
+# install npm deps and build frontend
 RUN npm ci && npm run production
 
 # php clear config

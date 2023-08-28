@@ -11,7 +11,7 @@ RUN apk --no-cache add python3 nodejs npm yarn nginx curl make g++ \
 
 # install nginx package
 RUN docker-php-ext-install -j$(nproc) mbstring xml gd bcmath intl zip \
-    pgsql pdo_pgsql
+    pdo_mysql
 
 # install composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -22,3 +22,6 @@ COPY . .
 # install composer deps
 RUN COMPOSER_ALLOW_SUPERUSER=1 && composer install
 RUN npm i && npm run dev
+
+# php clear config
+RUN php artisan key:generate && php artisan config:cache
