@@ -9,7 +9,7 @@
 
     <x-slot name="buttons">
         @can('create-common-items')
-            <x-link href="{{ route('items.create') }}" kind="primary" id="index-more-actions-new-item">
+            <x-link href="{{ route('items.create') }}" kind="primary" id="index-more-actions-new-item" >
                 {{ trans('general.title.new', ['type' => trans_choice('general.items', 1)]) }}
             </x-link>
         @endcan

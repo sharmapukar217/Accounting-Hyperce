@@ -4,7 +4,7 @@
     <span class="material-icons text-black js-hamburger-menu">menu</span>
 
     <div class="flex items-center m-auto">
-        <img src="{{ asset('public/img/akaunting-logo-green.svg') }}" class="w-8 m-auto" alt="Akaunting" />
+        <img src="{{ asset('public/img/Hyperce-logo-blue.png') }}" class="w-8 m-auto" alt="Akaunting" />
         <span class="ltr:ml-2 rtl:mr-2">{{ Str::limit(setting('company.name'), 22) }}</span>
     </div>
 
@@ -23,6 +23,7 @@
             </x-dropdown.link>
         </x-dropdown>
     @endcan
+
 </div>
 
 @stack('menu_start')
@@ -113,7 +114,7 @@
         <div class="relative mb-5 cursor-pointer">
             <button type="button" class="flex items-center" data-dropdown-toggle="dropdown-menu-company">
                 <div class="w-8 h-8 flex items-center justify-center">
-                    <img src="{{ asset('public/img/akaunting-logo-green.svg') }}" class="w-6 h-6" alt="Akaunting" />
+                    <img src="{{ asset('public/img/Hyperce-logo-blue.png') }}" class="w-6 h-6" alt="Akaunting" />
                 </div>
 
                 <div class="flex ltr:ml-2 rtl:mr-2">
@@ -223,7 +224,7 @@
 
     <span data-menu-close id="menu-cancel" class="material-icons absolute ltr:-right-2 rtl:-left-1.5 transition-all top-8 text-lg text-purple cursor-pointer z-10 hidden">cancel</span>
 
-    <div class="fixed w-full h-full invisible lg:hidden js-menu-background" style="background-color: rgba(0, 0, 0, 0.5); z-index: -1;"></div>
+    <div class="fixed w-full h-full invisible lg:hidden js-menu-background" style="background-color: #48A3A5; z-index: -1;"></div>
 </div>
 
 <x-loading.menu />

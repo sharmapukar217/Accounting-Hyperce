@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('user_roles', function (Blueprint $table) {
-            // $table->dropPrimary(['user_id', 'role_id', 'user_type']);
-            // $table->primary(['user_id', 'role_id']);
+            $table->dropPrimary(['user_id', 'role_id', 'user_type']);
+            $table->primary(['user_id', 'role_id']);
         });
 
         Schema::table('user_roles', function (Blueprint $table) {

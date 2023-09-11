@@ -13,12 +13,12 @@
 
         <div class="flex items-center mt-1">
             @if (empty($attributes['disabled']))
-                <label class="relative w-10 ltr:rounded-tl-lg ltr:rounded-bl-lg rtl:rounded-tr-lg rtl:rounded-br-lg py-2 px-1 text-sm text-center transition-all cursor-pointer" @click="form.{{ $name }}=1; @if(isset($attributes['change'])) {!! $attributes['change'] !!} @endif" v-bind:class="[form.{{ $name }} == 1 ? ['bg-green-500','text-white'] : 'bg-black-100']">
+                <label class="relative w-10 ltr:rounded-tl-lg ltr:rounded-bl-lg rtl:rounded-tr-lg rtl:rounded-br-lg py-2 px-1 text-sm text-center transition-all cursor-pointer" @click="form.{{ $name }}=1; @if(isset($attributes['change'])) {!! $attributes['change'] !!} @endif" v-bind:class="[form.{{ $name }} == 1 ? ['bg-customs','text-white'] : 'bg-black-100']">
                     {{ empty($enable) ? trans('general.yes') : $enable }}
                     <input type="radio" name="{{ $name }}" id="{{ $name }}-1" class="absolute left-0 opacity-0">
                 </label>
             @else
-                <label class="relative w-10 ltr:rounded-tl-lg ltr:rounded-bl-lg rtl:rounded-tr-lg rtl:rounded-br-lg py-2 px-1 text-sm text-center transition-all cursor-not-allowed{{ ($value) ? ' bg-green-500 text-white opacity-20 disabled' : ' disabled' }}">
+                <label class="relative w-10 ltr:rounded-tl-lg ltr:rounded-bl-lg rtl:rounded-tr-lg rtl:rounded-br-lg py-2 px-1 text-sm text-center transition-all cursor-not-allowed{{ ($value) ? ' bg-customs text-white opacity-20 disabled' : ' disabled' }}">
                     {{ empty($enable) ? trans('general.yes') : $enable }}
                     <input type="radio" name="{{ $name }}" id="{{ $name }}-1" class="absolute left-0 opacity-0" disabled>
                 </label>

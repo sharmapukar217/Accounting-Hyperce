@@ -5,7 +5,7 @@
 
     <x-slot name="content">
         <div>
-            <img src="{{ asset('public/img/akaunting-logo-green.svg') }}" class="w-16" alt="Akaunting" />
+            <img src="{{ asset('public/img/Hyperce-logo-blue.png') }}" class="w-16" alt="Akaunting" />
 
             <h1 class="text-lg my-3">
                 {{ trans('auth.login_to') }}
@@ -66,7 +66,7 @@
                 <x-button
                     type="submit"
                     ::disabled="form.loading"
-                    class="relative flex items-center justify-center bg-green hover:bg-green-700 text-white px-6 py-1.5 text-base rounded-lg disabled:bg-green-100 sm:col-span-6"
+                    class="relative flex items-center justify-center bg-customs hover:bg-customs-700 text-white px-6 py-1.5 text-base rounded-lg disabled:bg-green-100 sm:col-span-6"
                     override="class"
                 >
                     <x-button.loading>

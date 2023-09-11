@@ -1,7 +1,7 @@
 <label
     @click="form.{{ $name }} = '{{ $option->$optionKey }}'"
     class="border rounded-md px-2 py-2.5 flex items-center justify-center text-center text-sm font-medium sm:flex-1 cursor-pointer focus:outline-none transition-all"
-    :class="[form.{{ $name }} == '{{ $option->$optionKey }}' ? 'bg-purple border-transparent text-white hover:bg-purple-700' : 'bg-white border-gray-200 text-gray-900 hover:bg-gray-50']"
+    :class="[form.{{ $name }} == '{{ $option->$optionKey }}' ? 'bg-customs border-transparent text-white' : 'bg-white border-gray-200 text-gray-900 hover:bg-gray-50']"
 >
     <input type="radio"
         name="{{ $name }}"

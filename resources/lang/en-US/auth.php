@@ -22,6 +22,10 @@ return [
         'new_confirm'       => 'New Password Confirmation',
     ],
 
+    'information'=>[
+        'customize'=>'Customize Your Accounting'
+    ],
+
     'error' => [
         'self_delete'       => 'Error: Can not delete yourself!',
         'self_disable'      => 'Error: Can not disable yourself!',

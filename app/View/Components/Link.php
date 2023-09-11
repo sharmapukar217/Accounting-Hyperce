@@ -48,7 +48,7 @@ class Link extends Component
 
         switch ($this->kind) {
             case 'primary':
-                $default .= ' bg-green hover:bg-green-700 text-white disabled:bg-green-100';
+                $default .= ' bg-customs hover:bg-customs-700 text-white disabled:bg-customs-100';
                 break;
             case 'secondary':
                 $default .= ' bg-purple hover:bg-purple-700 text-white disabled:bg-purple-100';
