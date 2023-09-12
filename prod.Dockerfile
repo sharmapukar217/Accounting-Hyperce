@@ -23,7 +23,7 @@ COPY . .
 RUN COMPOSER_ALLOW_SUPERUSER=1 && composer prod
 
 # install npm deps and build frontend
-RUN npm ci && npm run production
+RUN npm ci && npm run build
 
 # php clear config
 RUN php artisan key:generate && php artisan config:cache
